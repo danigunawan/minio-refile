@@ -1,6 +1,7 @@
 <%- model_class = Pokemon -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <p>Use this site for reference data <%= link_to "Pokemondb", "http://pokemondb.net/evolution#evo-g1" %></p>
 </div>
 <div class="row">
     <% @pokemons.each do |pokemon| %>
