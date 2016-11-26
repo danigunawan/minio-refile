@@ -1,4 +1,4 @@
-<%= form_for @pokemon, :html => { :class => "form-horizontal pokemon" } do |f| %>
+<%= form_for @pokemon, :html => { :class => "form-horizontal pokemon col-lg-6" } do |f| %>
 
   <% if @pokemon.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
@@ -43,8 +43,12 @@
     </div>
     <%=f.error_span(:defense) %>
   </div>
-
-  <%= f.attachment_field :profile_image %>
+  <div class="form-group">
+    <%= f.label :image, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.attachment_field :profile_image, :class => 'form-control' %>
+    </div>
+  </div>
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
